@@ -1,0 +1,57 @@
+.defaultInstance, .selectionInstance {
+  display: flex;
+  flex-direction: column;
+  margin: 0.2rem  ;
+}
+
+/* Estilo para el select */
+.selectionInstance select, select {
+  appearance: none; /* Oculta el estilo nativo del select */
+  padding: 10px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: white;
+  position: relative;
+}
+
+/* Estilo para las opciones del select */
+.selectionInstance option, select option {
+  background-color: white;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Estilo para el select cuando está enfocado */
+.selectionInstance:focus, select:focus {
+  outline: none;
+  border-color: #555;
+}
+
+.booleanInstance {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: fit-content;
+  background-color: white;
+}
+
+.booleanInstance p {
+  margin: 10px;
+}
+
+.booleanInstance input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  appearance: none; /* Ocultar el estilo nativo del checkbox en algunos navegadores */
+}
+
+.booleanInstance input[type="checkbox"]:checked {
+  background-color: #007bff; /* Cambiar el fondo cuando el checkbox está marcado */
+}

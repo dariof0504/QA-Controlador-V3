@@ -1,0 +1,26 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.home > .listButtons {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.home > .listButtons > div {
+  margin: 0 2rem;
+  justify-content: center;
+  background-color: #ffffff; /* Color de fondo */
+  border: 1px solid #e5e5e5; /* Borde con un color suave */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  text-align: center; /* Alineación del texto en el centro */
+  padding: 20px; /* Espaciado interno */
+}
