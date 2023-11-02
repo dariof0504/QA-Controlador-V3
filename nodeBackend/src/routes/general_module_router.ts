@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { filter_paths } from '../middleware/filter_paths'
-import { create_element, get_all_elements, get_element_by_field, get_element_by_fk, get_element_by_id, update_element } from '../controllers/general_controller';
+import { create_element, delete_element, get_all_elements, get_element_by_field, get_element_by_fk, get_element_by_id, update_element } from '../controllers/general_controller';
 
 export const general_module_router = Router()
 
@@ -9,6 +9,8 @@ general_module_router
   .get('/byFK/:fk_path/:path/:pk', filter_paths, get_element_by_fk)
   .get('/byField/:path/:field/:payload', filter_paths, get_element_by_field)
   .get('/all/:path', filter_paths, get_all_elements);
+
+general_module_router.delete('/delete/:path/:id', filter_paths,delete_element)
   
 
 //Create component

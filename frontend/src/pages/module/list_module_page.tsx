@@ -50,7 +50,14 @@ export const LIST_MODULE_PAGE = () => {
     );
   };
 
-  const buttons = [createComponent, listComponent, editModule];
+  const deleteModule = (element: any) => {
+    const pk = getPk(element);
+    return (
+      <GENERAL_BUTTON path={`/delete/module/${pk}`} title="Eliminar modulo" />
+    );
+  };
+
+  const buttons = [createComponent, listComponent, editModule, deleteModule];
 
   return (
     <TableComponent

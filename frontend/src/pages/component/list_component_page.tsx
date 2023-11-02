@@ -36,7 +36,17 @@ export const LIST_COMPONENT_PAGE = () => {
     );
   };
 
-  const buttons: any[] = [editComponent];
+  const deleteComponent = (element: any) => {
+    const pk = getPk(element);
+    return (
+      <GENERAL_BUTTON
+        path={`/delete/component/${pk}`}
+        title="Eliminar componente"
+      />
+    );
+  };
+
+  const buttons: any[] = [editComponent, deleteComponent];
 
   return (
     <TableComponent

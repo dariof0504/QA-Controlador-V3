@@ -1,8 +1,9 @@
 import axios from "axios";
 import { getPk } from "../functions/general_functions";
+import config from "../envVar";
 
 export const api = axios.create({
-  baseURL: "http://localhost:4000/",
+  baseURL: config.NODE_BACKEND_URL,
   headers: {
     "Content-Type": "application/json",
   },
@@ -103,3 +104,14 @@ export const getElement = async (path: string, pk: string | undefined) => {
 
   return result;
 };
+
+export const deleteElement = async(path:string, pk:string) => {
+  const config = {
+    method: 'DELETE',
+    url: `/delete/${path}/${pk}`
+  }
+
+  const result = await api.request(config)
+
+  return result
+}

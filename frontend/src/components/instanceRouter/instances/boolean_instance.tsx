@@ -13,6 +13,7 @@ export const Boolean_instance = (props: instance) => {
     <label className="booleanInstance" >
       <p>{display_name}</p>
       <input
+        checked={state[field_name]}
         type="checkbox"
         onChange={() => handleValue()}
         value={state[field_name]}

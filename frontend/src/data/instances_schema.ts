@@ -10,17 +10,17 @@ import {
 } from "../types/questions";
 
 export const product: question = {
-  display_name: 'PRODUCTO',
-  field_name: 'product',
+  display_name: "PRODUCTO",
+  field_name: "product",
   instances: [
     {
-      display_name: 'Titulo de el producto',
-      field_name: 'product_title',
-      data_type: 'text',
-      type: 'TYPING'
-    } as type_instance
-  ]
-}
+      display_name: "Titulo de el producto",
+      field_name: "product_title",
+      data_type: "text",
+      type: "TYPING",
+    } as type_instance,
+  ],
+};
 
 export const session: question = {
   display_name: "SESION",
@@ -33,53 +33,53 @@ export const session: question = {
       type: "TYPING",
     } as type_instance,
     {
-      display_name: 'Target URL',
-      field_name: 'session_url',
-      data_type: 'text',
-      type: 'TYPING'
+      display_name: "Target URL",
+      field_name: "session_url",
+      data_type: "text",
+      type: "TYPING",
     } as type_instance,
     {
       display_name: "Servicio en el que se ejecuta",
       field_name: "session_service",
       type: "SELECTION",
       options: ["APPIUM", "SELENIUM"],
-    } as selection_instance
+    } as selection_instance,
   ],
 };
 
 export const rutine: question = {
-  display_name: 'Rutinas',
-  field_name: 'rutine',
+  display_name: "Rutinas",
+  field_name: "rutine",
   instances: [
     {
-      display_name: 'Titulo de la rutina',
-      field_name: 'rutine_title',
-      data_type: 'text',
-      type: 'TYPING'
+      display_name: "Titulo de la rutina",
+      field_name: "rutine_title",
+      data_type: "text",
+      type: "TYPING",
     } as type_instance,
     {
-      display_name: 'Selecciona el tipo de test',
-      field_name: 'rutine_type',
-      options: ['ESTRES', 'NORMAL'],
-      type: 'SELECTION'      
+      display_name: "Selecciona el tipo de test",
+      field_name: "rutine_type",
+      options: ["ESTRES", "NORMAL"],
+      type: "SELECTION",
     } as selection_instance,
     {
-      display_name: 'Propiedades para test de estres',
-      field_name: 'rutine_estres_props',
-      field_depends: 'rutine_type',
-      condition: 'ESTRES',
-      type: 'CONDITIONAL',
+      display_name: "Propiedades para test de estres",
+      field_name: "rutine_estres_props",
+      field_depends: "rutine_type",
+      condition: "ESTRES",
+      type: "CONDITIONAL",
       instances: [
         {
-          display_name: 'Cuantas iteraciones',
-          field_name: 'number',
-          data_type: 'number',
-          type: 'TYPING'
-        } as type_instance
-      ]
-    } as conditional_instance
-  ]
-}
+          display_name: "Cuantas iteraciones",
+          field_name: "number",
+          data_type: "number",
+          type: "TYPING",
+        } as type_instance,
+      ],
+    } as conditional_instance,
+  ],
+};
 
 export const component: question = {
   display_name: "Component",
@@ -100,7 +100,7 @@ export const component: question = {
     {
       display_name: "Tipo de localizacion",
       field_name: "component_type_location",
-      options: ["XPATH", "ID", "CLASSNAME", "CSS"],
+      options: ["XPATH", "ID", "CLASSNAME", "CSS", "UIAUTOMATOR"],
       type: "SELECTION",
     } as selection_instance,
     {
@@ -143,7 +143,7 @@ export const component: question = {
           type: "SELECTION",
         } as selection_instance,
         {
-          display_name: "La longitud del apartado es indefinida",
+          display_name: "Tiene longitud definida",
           field_name: "define_length",
           type: "BOOL",
         } as instance_type,

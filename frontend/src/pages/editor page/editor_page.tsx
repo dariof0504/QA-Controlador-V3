@@ -37,7 +37,7 @@ export const EDITOR_PAGE = () => {
     const { display_name, instances } = info as question;
 
     return (
-      <div>
+      <div className="formElement" >
         <p>{display_name}</p>
         {instances.map((instance) => (
           <INSTANCE_ROUTER_VIEW

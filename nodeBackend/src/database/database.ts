@@ -1,13 +1,16 @@
 import { Sequelize } from "sequelize";
+import { config } from 'dotenv'
 
-const db:string = 'controlador_qa_3'
-const db_user:string = 'admin'
-const db_pwd:string = 'admin'
-const db_host:string = 'localhost'
+config()
 
-const sqlDB = new Sequelize(db, db_user, db_pwd, {
-    host: db_host,
-    dialect: 'postgres'
-})
+const db = process.env.DB_NAME;
+const db_user = process.env.DB_USER;
+const db_pwd = process.env.DB_PWD;
+const db_host = process.env.DB_HOST;
 
-export default sqlDB
+const sqlDB = new Sequelize(db as string, db_user as string, db_pwd as string, {
+  host: db_host,
+  dialect: "postgres",
+});
+
+export default sqlDB;

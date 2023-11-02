@@ -14,7 +14,6 @@ export const JSON_FIELD_VIEW = (props: instance) => {
 
   return (
     <div>
-      <p>{display_name}</p>
       {instances.map((instance) => (
         <INSTANCE_ROUTER_VIEW
           instance_props={instance}

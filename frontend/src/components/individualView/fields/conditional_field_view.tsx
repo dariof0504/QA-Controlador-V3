@@ -15,7 +15,6 @@ export const CONDITIONAL_FIELD_VIEW = (props: instance) => {
   if (state[field_depends] === condition) {
     return (
       <div>
-        <p>{display_name}</p>
         {instances.map((instance) => (
           <INSTANCE_ROUTER_VIEW
             instance_props={instance}

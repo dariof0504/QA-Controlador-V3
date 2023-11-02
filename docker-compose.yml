@@ -1,0 +1,23 @@
+version: '3'
+services:
+  qa-frontend:
+    image: qa-frontend
+    ports:
+      - "3000:3000"
+
+  qa-node-backend:
+    image: qa-node-backend
+    ports:
+      - "4000:4000"
+
+  qa-python-backend:
+    image: qa-python-backend
+    ports:
+      - "7000:7000"
+
+  db:
+    image: postgres:12
+    environment:
+      POSTGRES_DB: controlador_qa_3
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin

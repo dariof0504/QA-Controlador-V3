@@ -1,9 +1,11 @@
 import app from './app'
 import sqlDB from './database/database'
-const PORT:number = 4000
 
 const main = async () => {
     try {
+        (await import('dotenv')).config()
+
+        const PORT = process.env.PORT_SERVICE
 
         await sqlDB.authenticate()
         await sqlDB.sync({force: false})

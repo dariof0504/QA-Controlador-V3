@@ -24,6 +24,7 @@ export const HOME_PAGE = () => {
         <div>
           <p>Rutinas</p>
           <GENERAL_BUTTON path="/select/product" title="Crear rutina" />
+          <GENERAL_BUTTON path="/list/rutine" title="Ver rutinas" />
         </div>
       </div>
     </div>

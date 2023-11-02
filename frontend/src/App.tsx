@@ -17,7 +17,9 @@ import { LIST_COMPONENT_PAGE } from "./pages/component/list_component_page";
 import { SELECT_PRODUCT_PAGE } from "./pages/rutine/select_product_page";
 import { EDITOR_PAGE } from "./pages/editor page/editor_page";
 
-import './style.css'
+import "./style.css";
+import { DELETE_PAGE } from "./pages/delete/delete_page";
+import { LIST_RUTINE_PAGE } from "./pages/rutine/list_rutine_page";
 
 function App() {
   return (
@@ -47,10 +49,13 @@ function App() {
 
         <Route path="/select/product" element={<SELECT_PRODUCT_PAGE />} />
         <Route path="/create/rutine/:fk" element={<CREATE_RUTINE_PAGE />} />
+        <Route path="/list/rutine" element={<LIST_RUTINE_PAGE />} />
 
         <Route path="/execute/session/:pk_session" element={<EXECUTE_PAGE />} />
 
         <Route path="/edit/:info_name/:pk" element={<EDITOR_PAGE />} />
+
+        <Route path="/delete/:path/:pk" element={<DELETE_PAGE />} />
       </Routes>
     </BrowserRouter>
   );

@@ -42,7 +42,12 @@ export const LIST_PRODUCT_PAGE = () => {
     );
   };
 
-  const buttons = [createModule, listModule, editProduct];
+  const deleteProduct = (element:any) => {
+    const pk = getPk(element)
+    return <GENERAL_BUTTON path={`/delete/product/${pk}`} title="Eliminar producto" />
+  }
+
+  const buttons = [createModule, listModule, editProduct, deleteProduct];
 
   return (
     <TableComponent

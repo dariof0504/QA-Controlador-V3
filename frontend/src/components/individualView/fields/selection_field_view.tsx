@@ -8,7 +8,6 @@ export const SELECTION_FIELD_VIEW = (props: instance) => {
 
   return (
     <div>
-      <p>{display_name}</p>
       <Instance_router
         instance_props={instance_props}
         state={state}

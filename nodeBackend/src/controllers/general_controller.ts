@@ -131,3 +131,16 @@ export const update_element = async (req: Request, res: Response) => {
     }
 
 }
+
+export const delete_element = async (req: Request, res:Response) => {
+    const { params } = req
+    const { table_name, id } = params
+
+    try {
+        const result = await tables[table_name].findByPk(id)
+        await result.destroy()
+        res.json('Elemento eliminado')
+    } catch (err) {
+        console.log(err)
+    }
+}
